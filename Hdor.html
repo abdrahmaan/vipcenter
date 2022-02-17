@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحضور والغياب</title>
+<!-- Font Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- our style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-info">
+
+
+<div class="container text-center d-flex flex-column align-items-center justify-content-center" style="min-height: calc(100vh - 60px); position: relative;">
+
+    <img class="d-none d-lg-block" src="assests/undraw-exams.svg"
+    style="position: absolute; top: 50px;left: -90px; width: 35%;" alt="">
+   <h2 id ="txt-header"class="my-4">الحضور والغياب</h2>
+   <h6 id="desc" style="direction: rtl;">إبحث بإسم الطالب ثلاثى ليظهر حضور وغياب الطالب ...</h6>
+   <input id="input" type="text" placeholder="إسم الطالب" class="form-control text-center mx-auto mt-3" style="width: 40%;">
+   <div class="btn btn-dark mt-3" style="width: 20%;">إبحث</div>
+    <div class="alert d-none alert-danger mt-4 w-50 "></div>
+   <table class="mt-4 d-none table-info table table-dark table-hover table-bordered text-center">
+        <thead>
+          <tr>
+              
+              <th scope="col">التاريخ</th>
+              <th scope="col">المدرس</th>
+              <th scope="col">المادة</th>
+              <th scope="col">الإسم</th>
+            <th scope="col">ID</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>22/2/2022</td>
+                <td>كريم الشاذلى</td>
+                <td>جغرافيا</td>
+                <td>سيد محمد على</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                
+           
+                <td>فارغ</td>
+                <td>فارغ</td>
+                <td>فارغ</td>
+                <td>فارغ</td>
+                <td>فارغ</td>
+            </tr>
+        </tbody>
+      </table>
+</div>
+
+
+
+<script src="js/screens/Hdor.js"></script>
+<script src="js/header.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+overflow-x: hidden;
+font-family: "Cairo";
+font-size: 16px;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0 ;
+    padding: 0 ;
+
+    cursor: pointer;
+
+}
+ul{
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+a{
+text-decoration: none;
+}
+
+
+
+
+
+/* Start Header */
+h4{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+}
+
+header{
+position: relative;
+z-index: 1000 !important;
+
+}
+header nav {
+height: 100%;
+}
+
+
+header h4{
+    cursor: pointer;
+}
+header .container nav ul li a.active {
+    background-color: #0dcaf0;
+    color: #21325e !important;
+    padding: 5px 10px !important;
+    border-radius: 7px;
+}
+
+
+
+
+/* End Header */
+
+
+/* ========== Start Home Page ========= */
+/* Animations */
+
+@keyframes imghome {
+    0%{
+        right: -100%;
+    }
+   100%{
+        right: 50%;
+    }
+}
+
+@keyframes svg-big {
+    0%{
+        top: -615px;
+    }
+    100%{
+top:-150;
+    }
+}
+
+@keyframes parag-animation {
+    0%{
+        opacity: 0;
+        line-height: 0;
+    }
+    100%{
+        opacity: 1 ;
+        line-height: 2 ;
+    }
+}
+@keyframes btn-animation {
+    0%{
+        opacity: 0;
+    
+    }
+    100%{
+        opacity: 1 ;
+        
+    }
+}
+
+#imghome{
+    position: absolute;
+    top: -150px;
+    left: -25px;
+    animation: svg-big 1s forwards ease-out;
+
+}
+#img-svg{
+    width: 530px;
+    position: absolute;
+    top: -40px;
+    right: -1000px;
+    transform: translateX(50%);
+    animation: imghome 1.5s forwards 0.3s ease-out;
+
+}
+
+p#home-parag{
+    line-height: 0 ;
+    opacity: 0 ;
+    animation: parag-animation 1.2s forwards ease-in-out 3s;
+}
+
+div#col-data a.btn.btn-warning{
+    
+    opacity: 0 ;
+    animation: btn-animation 1.2s forwards ease-in-out 4s;
+}
+
+@media (min-width:319px ) and (max-width:1025px) {
+    
+
+    #imghome{
+        position: absolute;
+        top: -150px;
+        left: -200px;
+    }
+    
+}
+
+
+@media (min-width:991px) and (max-width:1200px) {
+    #img-svg{
+        position: absolute;
+        width: 470px;
+        top: 10px;
+        right: 50%;
+        transform: translateX(50%);
+    animation: imghome 1s forwards 0.3s;
+
+    }
+}
+
+@media (min-width:319px) and (max-width:426px) {
+    
+    #col-data{
+        padding-top: 25px !important ;
+    }
+
+
+/* ========== End Home PAge ========= */
+/* ========== Login Page ============ */
+
+.main-login{
+    height: 450px;
+     border: 6px solid  #21325E;
+      border-radius: 10px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+}
+
+.btn-login{
+    transition: 0.3s;
+}
+.btn-login:hover{
+    background-color: #2b3950 !important;
+}
+
+input{
+    text-align: center;
+}
+
+
+/* ========== End Login Page ============ */
+
+/* ========== Add Studient Page ============ */
+
+.addstu .row .col- .field label{
+    white-space: nowrap !important;
+}   
+
+.addstu .row #columnData{
+    background-color: red;
+}
+
+div#columnData h4 {
+    color: #21325E !important;
+}
+
+div#columnData div.field label{
+white-space: nowrap !important ;
+margin-left: 20px;
+color: #21325E !important;
+}
+
+
+
+/* ========== End Add Studient Page ============ */
+
+
+
+/* ========== Start Exam Results ============ */
+
+
+
+
+    @media (min-width:319px) {
+
+       .container #input{
+            width: 70%;
+        }
+        
+    }
+
+    @media (min-width:766px) {
+
+       .container #input{
+            width: 40%;
+        }
+        
+    }
+
+}
+/* ========== End Exam Rsults ============ */

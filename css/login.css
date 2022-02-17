@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+overflow-x: hidden;
+font-family: "Cairo";
+font-size: 16px;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0 ;
+    padding: 0 ;
+
+    cursor: pointer;
+
+}
+ul{
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+a{
+text-decoration: none;
+}
+
+
+/* Start Header */
+h4{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+}
+
+header{
+position: relative;
+z-index: 1000 !important;
+
+}
+header nav {
+height: 100%;
+}
+
+
+header h4{
+    cursor: pointer;
+}
+header .container nav ul li a.active {
+    background-color: #0dcaf0;
+    color: #21325e !important;
+    padding: 5px 10px !important;
+    border-radius: 7px;
+}
+
+/* End Header */
+
+
+.main-login{
+    height: 450px;
+     border: 6px solid  #21325E;
+      border-radius: 10px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+}
+
+.btn-login{
+    transition: 0.3s;
+}
+.btn-login:hover{
+    background-color: #2b3950 !important;
+}
+
+input{
+    text-align: center;
+}

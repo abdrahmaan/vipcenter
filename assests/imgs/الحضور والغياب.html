@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)file:///D:/Web%20Development/El-Tellawy/hdor.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحضور والغياب</title>
+<!-- Font Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&amp;display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="./الحضور والغياب_files/bootstrap.min.css">
+    <!-- our style -->
+    <link rel="stylesheet" href="./الحضور والغياب_files/style.css">
+</head>
+<body class="bg-info"><div class="w-100" style="min-width: 100vw;">
+<header style="height: 60px; background-color: #21325E; z-index: 5">
+<div class="container d-flex align-items-center justify-content-between px-2" style="height: 60px;">
+    <h4 class="pe-auto">VIP Center Site</h4>
+    <nav class="row justify-content-center align-items-center d-none d-lg-block">
+        <ul class="d-flex align-items-center justify-content-center" style="height: 100%;">
+            <li class="ms-3"><a id="home" class="px-1 text-light" href="file:///D:/Web%20Development/El-Tellawy/index.html">الرئيسية<img class="ms-1" src="./الحضور والغياب_files/badge-wc.svg"></a></li>
+            <li class="ms-3"><a id="hdor" class="px-1 text-light active" href="file:///D:/Web%20Development/El-Tellawy/hdor.html">الحضور و الغياب<img class="ms-1" src="./الحضور والغياب_files/icon-hdor.svg"></a></li>
+            <li class="ms-3"><a id="examresults" class="px-1 text-light" href="file:///D:/Web%20Development/El-Tellawy/ExamResults.html">نتائج الإمتحانات<img class="ms-1" src="./الحضور والغياب_files/icon-exam.svg"></a></li>
+            <li class="ms-3">                 
+                    <div class="dropdown-toggle btn bg-info" data-bs-toggle="dropdown">
+                    الإضافات
+                    <img class="ms-1" src="./الحضور والغياب_files/icon-adds.svg">
+                    </div>
+                    <ul class="dropdown-menu text-center">
+                      <li><a class="dropdown-item " href="file:///D:/Web%20Development/El-Tellawy/NewEntry.html">حضور طالب <img class="ms-1" src="./الحضور والغياب_files/icon-newhdor.svg"></a></li>
+                      <li><a class="dropdown-item" href="file:///D:/Web%20Development/El-Tellawy/ExamCorrect.html">نتيجة إمتحان <img class="ms-1" src="./الحضور والغياب_files/icon-newresult.svg"></a></li>
+                      <li><a class="dropdown-item" href="file:///D:/Web%20Development/El-Tellawy/NewStudient.html">طالب جديد <img class="ms-1" src="./الحضور والغياب_files/icon-newstu.svg"></a></li>
+                      <li><a class="dropdown-item" href="file:///D:/Web%20Development/El-Tellawy/NewTeacher.html">مدرس أو مادة جديدة <img class="ms-1" src="./الحضور والغياب_files/icon-newteacher.svg"></a></li>
+                    </ul>
+            </li>
+            <li id="btn-logout" class="ms-4"><a class="px-2 text-light" href="file:///D:/Web%20Development/El-Tellawy/hdor.html">تسجيل الخروج <img class="ms-1" src="./الحضور والغياب_files/icon-logout.svg"><img></a></li>
+        </ul> 
+    </nav>
+    <p class="d-block d-lg-none" style="padding:0; margin: 0; color: white;">Menu</p>
+</div>
+</header>
+</div>
+
+
+<div class="container text-center d-flex flex-column align-items-center justify-content-center" style="min-height: calc(100vh - 60px); position: relative;">
+
+    <img class="d-none d-lg-block" src="./الحضور والغياب_files/undraw-exams.svg" style="position: absolute; top: 50px;left: -90px; width: 35%;" alt="">
+   <h2 id="txt-header" class="my-4">الحضور والغياب</h2>
+   <h6 id="desc" style="direction: rtl;">إبحث بإسم الطالب ثلاثى ليظهر حضور وغياب الطالب ...</h6>
+   <input id="input" type="text" placeholder="إسم الطالب" class="form-control text-center mx-auto mt-3" style="width: 40%;">
+   <div class="btn btn-dark mt-3" style="width: 20%;">إبحث</div>
+    <div class="alert alert-danger mt-4 w-50 d-none">من فضلك ، إكتب إسم الطالب ثلاثى وتأكد من وجود حرف الـ ي بالنقاط</div>
+   <table class="mt-4 d-none table-info table table-dark table-hover table-bordered text-center">
+        <thead>
+          <tr>
+              
+              <th scope="col">التاريخ</th>
+              <th scope="col">المدرس</th>
+              <th scope="col">المادة</th>
+              <th scope="col">الإسم</th>
+            <th scope="col">ID</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>22/2/2022</td>
+                <td>كريم الشاذلى</td>
+                <td>جغرافيا</td>
+                <td>سيد محمد على</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                
+           
+                <td>فارغ</td>
+                <td>فارغ</td>
+                <td>فارغ</td>
+                <td>فارغ</td>
+                <td>فارغ</td>
+            </tr>
+        </tbody>
+      </table>
+</div>
+
+
+
+<script src="./الحضور والغياب_files/Hdor.js.download"></script>
+<script src="./الحضور والغياب_files/header.js.download"></script>
+<script src="./الحضور والغياب_files/bootstrap.bundle.js.download"></script>
+<script src="./الحضور والغياب_files/jquery-3.6.0.min.js.download"></script>
+
+</body></html>

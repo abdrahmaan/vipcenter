@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Font Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- our style -->
+    <link rel="stylesheet" href="css/newstudient.css">
+</head>
+<body>
+
+
+<div class="addstu bg-info" style="position: relative; min-height:calc(100vh - 60px); width: 100%;">
+
+    <div class="row align-items-center pt-5">
+
+    <div class="col-6 d-none d-lg-block py-4 text-center">
+<img src="assests/undraw.svg" alt="" style="width: 50%; max-width: 100%;"> 
+
+    </div>
+
+    <div id="columnData" class="col-lg-6 col-sm-12 text-center pt-5">
+     <h4 style="direction: rtl" class="py-4">إضافة طالب جديد ...</h4>
+    <div class="field d-flex mx-auto my-3 w-75">
+    <input type="text" placeholder="إسم الطالب ثلاثى" class="form-control">
+    <label class="text-light">الإسم</label>
+    </div>
+    <div class="field d-flex mx-auto my-3 w-75">
+    <input type="text" placeholder="0111XXXXXXX" class="form-control">
+    <label class="text-light p-2">رقم التيليفون</label>
+    </div>
+    <div class="field d-flex mx-auto my-3 w-75">
+        <select class="form-select form-select-sm text-center">
+            <option selected>الأول الثانوى</option>
+            <option value="1">الثانى الثانوى</option>
+            <option value="2">الثالث الثانوى</option>
+          </select>
+    <label class="text-light p-2">الصف</label>
+          
+    </div>
+    <div class="btn btn-primary">إضافة طالب</div>
+    
+</div>
+
+</div>
+
+
+
+<script src="js/screens/NewStu.js"></script>
+<script src="js/header.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+</body>
+</html>

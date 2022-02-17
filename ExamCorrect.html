@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Font Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- our style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-info">
+
+    <div class="container d-flex flex-column justify-content-start pt-3 pb-3 align-items-center" style="min-height: calc(120vh - 60px); max-height: calc(120vh - 60px); position: relative;">
+        <h2 id="header-newentry" class="text-dark">نتيجة إمتحان جديدة</h2>
+        <img src="assests/undraw-hdor.svg" alt="" style="width: 200px;">
+        
+        <div class="data-form w-100">
+            <div class="field w-100 my-2 d-flex justify-content-center">
+                <input type="text" placeholder="إسم الطالب ثلاثى" class="form-control text-center mt-2" style="width: 30%;">
+               <h6 class="d-flex align-items-center justify-content-center m-2" style="width: 10%;">الإسم</h6>
+            </div>
+            <div class="field w-100 my-2 d-flex justify-content-center">
+               <select class="form-select form-select-sm text-center" style="width: 30%;">
+                   <option selected>كريم السيد</option>
+                   <option value="1">على الشاذلى</option>
+                   <option value="2">عصام أبوالنيل</option>
+                   <option value="2">عمرو الصيفى</option>
+                 </select>
+               <h6 class="d-flex align-items-center justify-content-center m-2" style="width: 10%;">المدرس</h6>
+            </div>
+            <div class="field w-100 my-2 d-flex justify-content-center">
+               <select class="form-select form-select-sm text-center" style="width: 30%;">
+                   <option selected>تاريخ</option>
+                   <option value="1">جغرافيا</option>
+                   <option value="2">عربى</option>
+                   <option value="2">كيمياء</option>
+                   <option value="2">فيزياء</option>
+                   <option value="2">إستاتيكا</option>
+                   <option value="2">جبر وتفاضل</option>
+                   <option value="2">ديناميكا</option>
+                 </select>
+               <h6 class="d-flex align-items-center justify-content-center m-2" style="width: 10%;">المادة</h6>
+            </div>
+            <div class="field w-100 my-2 d-flex justify-content-center">
+                <input type="number" value="30" class="form-control text-center mt-2" style="width: 30%;">
+               <h6 class="d-flex align-items-center justify-content-center m-2" style="width: 10%;">درجة الإمتحان</h6>
+            </div>
+            <div class="field w-100 my-2 d-flex justify-content-center">
+                <input type="number" value="0" class="form-control text-center mt-2" style="width: 30%;">
+               <h6 class="d-flex align-items-center justify-content-center m-2" style="width: 10%;">درجة الطالب</h6>
+            </div>
+            <!-- Date input -->
+            <div class="field w-100 my-2 d-flex justify-content-center">
+               <input type="date" class="form-control text-center mt-2" style="width: 30%;">
+              <h6 class="d-flex align-items-center justify-content-center  m-2" style="width: 10%;">التاريخ</h6>
+            </div>
+
+        </div>
+        <div class="btn btn-success w-25 mx-auto my-2">إضافة النتيجة</div>
+        
+    <div class="alert mb-5 alert-danger d-none pb-4 w-50 text-center">برجاء التأكد من كتابة إسم الطالب ثلاثى ، والتأكد من
+        كتابة حرف الـ ي بالنقاط</div>
+    
+    </div>
+<script src="js/header.js"></script>
+<script src="js/screens/ExamCorrect.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+</body>
+</html>

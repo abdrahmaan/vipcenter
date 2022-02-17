@@ -128,6 +128,7 @@ top:-150;
 p#home-parag{
     line-height: 0 ;
     opacity: 0 ;
+    transition: 1.5s;
     animation: parag-animation 1.2s forwards ease-in-out 3s;
 }
 
@@ -137,7 +138,7 @@ div#col-data a.btn.btn-warning{
     animation: btn-animation 1.2s forwards ease-in-out 4s;
 }
 
-@media (min-width:319px ) and (max-width:1025px) {
+@media (min-width:318px ) and (max-width:1025px) {
     
 
     #imghome{
@@ -145,6 +146,14 @@ div#col-data a.btn.btn-warning{
         top: -150px;
         left: -200px;
     }
+
+   div.row div#col-data .btn{
+        
+    white-space: nowrap;
+    width: fit-content;
+
+    }
+
     
 }
 
@@ -163,10 +172,25 @@ div#col-data a.btn.btn-warning{
 
 @media (min-width:319px) and (max-width:426px) {
     
+    #imghome{
+        position: absolute;
+        top: -150px;
+        left: -250px;
+    }
+
     #col-data{
         padding-top: 25px !important ;
     }
 
+    #col-data p{
+        transition: 2s;
+      
+    }
+
+    div.row div#col-data .btn{
+        width: 50% !important;
+    }
+}
 
 /* ========== End Home PAge ========= */
 /* ========== Login Page ============ */
@@ -242,5 +266,25 @@ color: #21325E !important;
         
     }
 
-}
 /* ========== End Exam Rsults ============ */
+
+
+/* Start Hdor And Gheyad  */
+
+@media (min-width:319px) and (max-width:426px) {
+
+    .container h2#txt-header{
+        font-size: 30px !important;
+    }
+        .container h6#desc{}    
+        .container #input{
+                        width: 100% !important;
+        }
+        .container div#btn-hdor{
+            width: 70% !important;
+        } 
+    
+}
+
+
+/* End Hdor And Gheyad  */

@@ -4,7 +4,7 @@ let mainHeader = `<header style="height: 60px; z-index:5; background-color: #213
     <nav class="row justify-content-center align-items-center d-none d-lg-block">
         <ul class="d-flex align-items-center justify-content-center" style="height: 100%;">
             <li class="ms-3"><a id="home" class="px-1 text-light" href="index.html">الرئيسية<img class="ms-1" src="assests/badge-wc.svg"></img></a></li>
-            <li class="ms-3"><a id="hdor" class="px-1 text-light" href="hdor.html">الحضور و الغياب<img class="ms-1" src="assests/icon-hdor.svg"></img></a></li>
+            <li class="ms-3"><a id="hdor" class="px-1 text-light" href="Hdor.html">الحضور و الغياب<img class="ms-1" src="assests/icon-hdor.svg"></img></a></li>
             <li class="ms-3"><a id="examresults" class="px-1 text-light" href="ExamResults.html">نتائج الإمتحانات<img class="ms-1" src="assests/icon-exam.svg"></img></a></li>
                 <li class="ms-4"><a class="px-2 text-light" href="Login.html">تسجيل الدخول <img class="ms-1" src="assests/icon-login.svg"></img></a></li>
             </ul> 
@@ -20,7 +20,7 @@ let userHeader = `
     <nav class="row justify-content-center align-items-center d-none d-lg-block">
         <ul class="d-flex align-items-center justify-content-center" style="height: 100%;">
             <li class="ms-3"><a id="home" class="px-1 text-light" href="index.html">الرئيسية<img class="ms-1" src="assests/badge-wc.svg"></img></a></li>
-            <li class="ms-3"><a id="hdor" class="px-1 text-light" href="hdor.html">الحضور و الغياب<img class="ms-1" src="assests/icon-hdor.svg"></img></a></li>
+            <li class="ms-3"><a id="hdor" class="px-1 text-light" href="Hdor.html">الحضور و الغياب<img class="ms-1" src="assests/icon-hdor.svg"></img></a></li>
             <li class="ms-3"><a id="examresults" class="px-1 text-light" href="ExamResults.html">نتائج الإمتحانات<img class="ms-1" src="assests/icon-exam.svg"></img></a></li>
             <li class="ms-3">                 
                     <div class="dropdown-toggle btn bg-info" data-bs-toggle="dropdown">

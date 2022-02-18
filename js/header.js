@@ -9,7 +9,7 @@ let mainHeader = `<header style="height: 60px; z-index:5; background-color: #213
                 <li class="ms-4"><a class="px-2 text-light" href="Login.html">تسجيل الدخول <img class="ms-1" src="assests/icon-login.svg"></img></a></li>
             </ul> 
         </nav>
-        <p class="d-block d-lg-none" style="padding:0; margin: 0; color: white;">Menu</p>
+        <p id="menu" class="d-block d-lg-none" style="padding:0; margin: 0; color: white;">Menu</p>
     </div>
 </header>`;
 
@@ -37,7 +37,7 @@ let userHeader = `
             <li id ="btn-logout" class="ms-4"><a class="px-2 text-light" href="">تسجيل الخروج <img class="ms-1" src="assests/icon-logout.svg" ><img/></a></li>
         </ul> 
     </nav>
-    <p class="d-block d-lg-none" style="padding:0; margin: 0; color: white;">Menu</p>
+    <img class="d-block d-lg-none" id="menu" src="assests/icon-list.svg"></img>
 </div>
 </header>
 `
@@ -64,7 +64,7 @@ document.body.prepend(myDiv);
 
 //////////// Functions
 
-
+// Event on click Logout 
 let logout = document.querySelector("#btn-logout");
 // Clear User Obj from Local Storage
 logout.addEventListener("click", (e)=>{
@@ -73,3 +73,29 @@ localStorage.removeItem("user-data");
 window.location.href = "index.html";
 console.log("Hello");
 });
+
+/*********/
+
+// Event On Click Menu 
+let menu = document.querySelector("#menu");
+let nav = document.querySelector("header .container nav")
+
+let menuVisible = false; 
+
+
+let ToggleMenu = function () {
+
+    if (menuVisible) {
+        nav.style.height = "0vh";
+        menuVisible = false
+    } else {
+        nav.style.height = "105vh";
+        menuVisible = true;
+    }
+
+    // console.log("H")
+
+};
+
+menu.addEventListener("click",ToggleMenu);
+

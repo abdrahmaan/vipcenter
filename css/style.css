@@ -53,12 +53,54 @@ height: 100%;
 header h4{
     cursor: pointer;
 }
-header .container nav ul li a.active {
+
+@media (min-width: 990px) {
+
+   header .container nav ul li a.active {
     background-color: #0dcaf0;
     color: #21325e !important;
     padding: 5px 10px !important;
     border-radius: 7px;
+} 
 }
+
+@media (min-width:319px) and (max-width:990px) {
+
+    header .container{
+    padding: 20px !important;
+    }
+
+    header .container img{
+        max-width: 75px !important;
+    }
+    header .container nav{
+    display: block !important;  
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 105% !important;
+    height: 0vh;
+    background-color: #314781;
+    overflow: hidden;
+    transition: 1.2s;
+}
+ header .container nav ul{
+     flex-direction: column !important;
+    justify-content: center !important;
+
+ }
+
+ header .container nav ul li{
+     margin-bottom: 30px !important;
+ }
+
+ .dropdown-toggle{
+     background-color: white !important;
+ }
+
+ 
+}
+
 
 
 

@@ -60,6 +60,8 @@ header .container nav ul li a.active {
 /* End Header */
 
 
+/* Start Login */
+
 .main-login{
     height: 450px;
      border: 6px solid  #21325E;
@@ -79,4 +81,19 @@ header .container nav ul li a.active {
 
 input{
     text-align: center;
+}
+
+@media (min-width:319px) and (max-width:767px) {
+
+    .col-6{
+        min-width: 85%;
+    }
+
+    .col-6 h3{
+        font-size: 25px;
+    }
+
+    .col-6 .btn-login{
+        width: 70% !important;
+    }
 }

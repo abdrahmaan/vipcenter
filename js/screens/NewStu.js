@@ -44,6 +44,7 @@ let AddStudient = function () {
     // Inputs After Add Setting 
     inputs[0].focus();
     inputs[0].value = ""
+    inputs[1].value = ""
 
   } else {
 

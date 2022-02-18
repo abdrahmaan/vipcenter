@@ -5,7 +5,7 @@ stuName.focus();
 
 /// Make TextTyping Animation
 // Elements & Text 
-let header = document.querySelector(".container #txtheader");
+let header = document.querySelector(".container #txt-header");
 let headerContent = header.textContent;
 console.log(header);
 console.log(headerContent);

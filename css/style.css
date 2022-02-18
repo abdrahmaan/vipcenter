@@ -275,14 +275,17 @@ color: #21325E !important;
 
     .container h2#txt-header{
         font-size: 30px !important;
-    }
-        .container h6#desc{}    
+    }  
         .container #input{
                         width: 100% !important;
         }
         .container div#btn-hdor{
             width: 70% !important;
         } 
+
+        .container div.alert{
+            min-width: 100%;
+        }
     
 }
 

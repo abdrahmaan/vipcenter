@@ -1,4 +1,4 @@
-let mainHeader = `<header style="height: 60px; z-index:5; background-color: #21325E;">
+const mainHeader = `<header style="height: 60px; z-index:5; background-color: #21325E;">
 <div class="container d-flex align-items-center justify-content-between px-2" style="height: 60px;">
    <a href="index.html"><img src="assests/imgs/logo2.png" style="max-width:90px; cursor: pointer"></img></a>
     <nav class="row justify-content-center align-items-center d-none d-lg-block">
@@ -9,11 +9,11 @@ let mainHeader = `<header style="height: 60px; z-index:5; background-color: #213
                 <li class="ms-4"><a class="px-2 text-light" href="Login.html">تسجيل الدخول <img class="ms-1" src="assests/icon-login.svg"></img></a></li>
             </ul> 
         </nav>
-        <p id="menu" class="d-block d-lg-none" style="padding:0; margin: 0; color: white;">Menu</p>
+        <img id="menu-list" class="d-block d-lg-none" src="assests/icon-list.svg"></img>
     </div>
 </header>`;
 
-let userHeader = `
+const userHeader = `
 <header style="height: 60px; background-color: #21325E; z-index: 5">
 <div class="container d-flex align-items-center justify-content-between px-2" style="height: 60px;">
     <a href="index.html"><img src="assests/imgs/logo2.png" style="max-width:90px; cursor: pointer"></img></a>
@@ -37,7 +37,7 @@ let userHeader = `
             <li id ="btn-logout" class="ms-4"><a class="px-2 text-light" href="">تسجيل الخروج <img class="ms-1" src="assests/icon-logout.svg" ><img/></a></li>
         </ul> 
     </nav>
-    <img class="d-block d-lg-none" id="menu" src="assests/icon-list.svg"></img>
+    <img class="d-block d-lg-none" id="menu-list" src="assests/icon-list.svg"></img>
 </div>
 </header>
 `
@@ -77,25 +77,3 @@ console.log("Hello");
 /*********/
 
 // Event On Click Menu 
-let menu = document.querySelector("#menu");
-let nav = document.querySelector("header .container nav")
-
-let menuVisible = false; 
-
-
-let ToggleMenu = function () {
-
-    if (menuVisible) {
-        nav.style.height = "0vh";
-        menuVisible = false
-    } else {
-        nav.style.height = "105vh";
-        menuVisible = true;
-    }
-
-    // console.log("H")
-
-};
-
-menu.addEventListener("click",ToggleMenu);
-

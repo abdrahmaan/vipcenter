@@ -22,7 +22,6 @@ setTimeout(() => {
 /// Add Class To Nav Button
 setTimeout(() => {
     let btnHome = document.querySelector("#home");
-    console.log(btnHome);
     btnHome.classList.add("active");
 }, 100);
 

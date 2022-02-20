@@ -15,7 +15,7 @@ if(isset($_GET["name"])){
     
     $name = $_GET["name"];
 
-    $q = "SELECT * FROM tbl_exams WHERE stuname = '$name'";
+    $q = "SELECT * FROM tbl_exams WHERE Namee = '$name'";
     $cmd = mysqli_query($con,$q);
 
     if(mysqli_num_rows($cmd) > 0){

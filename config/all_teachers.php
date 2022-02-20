@@ -7,16 +7,11 @@ $response = array("status"=> 0);
 $data = [];
 $msg = "";
 
-
 // Try For Handle Error
 try {
     
-    
-if(isset($_GET["name"])){
-    
-    $name = $_GET["name"];
 
-    $q = "SELECT * FROM tbl_hdor WHERE Namee = '$name'";
+    $q = "SELECT Namee FROM tbl_teachers";
     $cmd = mysqli_query($con,$q);
 
     if(mysqli_num_rows($cmd) > 0){
@@ -35,14 +30,6 @@ if(isset($_GET["name"])){
     echo json_encode($response);
     
     }; // End IF Num rows > 0
-
-
-} else {
-
-    echo json_encode($response);
-
-} /// End if namee is not set
-
 
 } catch (\Throwable $th) {
 

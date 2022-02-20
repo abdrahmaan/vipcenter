@@ -19,5 +19,4 @@ let ToggleMenu = function () {
 menu.addEventListener("click", ToggleMenu);
 
 document.addEventListener("click", () => {
-    console.log(menu);
 })

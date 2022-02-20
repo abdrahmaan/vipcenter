@@ -30,11 +30,21 @@ setInterval(() => {
 
 /***********/
 
+// Fetch All Teachers In Options
+
+
+
+/***********/
+
 
 /// Validation & Focus
 let inputs = document.querySelectorAll("input,select");
 let btnAddEntry = document.querySelector("div.btn.btn-success");
 let myAlert = document.querySelector("div.alert.alert-danger");
+let mainUrl = "http://localhost:8090/VipCenter/config";
+
+
+
 // Focus
 inputs[0].focus();
 // Get Today Data And set Date
@@ -43,25 +53,50 @@ var dateString = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).t
 // Set Date
 inputs[3].setAttribute("value",dateString);
 
-const NewEntry = () =>{
+let NewEntry = () =>{
     if(inputs[0] !== "" && inputs[0].value.length >= 11 && ! inputs[0].value.includes("ى")){
-            console.log(inputs[0].value);
-            console.log(inputs[1].value);
-            console.log(inputs[2].value);
-            console.log(inputs[3].value);
+
+        let inputs = document.querySelectorAll("input,select");
+
+        let url = `${mainUrl}/new_hdor.php?name=${inputs[0].value}&teacher=${inputs[1].value}&leason=${inputs[2].value}&date=${inputs[3].value}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
 
 
-            console.log("done");
-            // Alert Setting
-            myAlert.textContent ="تم إضافة الطالب بنجاح"
-            myAlert.classList.contains("alert-danger") ? myAlert.classList.replace("alert-danger","alert-success") : null;
-            myAlert.classList.contains("d-none") ? myAlert.classList.remove("d-none") : null;
-            setTimeout(() => {
-                myAlert.classList.add("d-none");
-            }, 2500);
-            // Inputs After Add Setting 
-                inputs[0].focus();
-                inputs[0].value = ""
+                console.log(data);
+
+                if (data.status == 1) {
+
+                    console.log("done");
+
+                    // Alert Setting
+                    myAlert.textContent = "تم حضور الطالب بنجاح"
+                    myAlert.classList.contains("alert-danger") ? myAlert.classList.replace("alert-danger", "alert-success") : null;
+                    myAlert.classList.contains("d-none") ? myAlert.classList.remove("d-none") : null;
+                    setTimeout(() => {
+                        myAlert.classList.add("d-none");
+                    }, 2500);
+                    console.log("done");
+                    // Inputs After Add Setting 
+                    inputs[0].focus();
+                    inputs[0].value = "";
+    
+
+                }
+            })
+            .catch(error => {
+
+                console.log(error);
+                myAlert.classList.contains("d-none") ? myAlert.classList.remove("d-none") : null;
+                myAlert.classList.contains("alert-success") ? myAlert.classList.replace("alert-success", "alert-danger") : null;
+                myAlert.textContent = "يوجد خطأ بقواعد البيانات";
+                setTimeout(() => {
+                    myAlert.classList.add("d-none");
+                }, 4000);
+
+            });
 
     } else {
 

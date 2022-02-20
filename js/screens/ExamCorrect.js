@@ -61,6 +61,7 @@ let CorrectExamAPI = () => {
                     // Inputs After Add Setting 
                     inputs[0].focus();
                     inputs[0].value = "";
+                    inputs[4].value = 0;
 
                 }
             })

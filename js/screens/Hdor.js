@@ -79,8 +79,8 @@ let SearchFunction = function () {
               let row = document.createElement("tr"); 
               let data = `
               <td>${obj.Date}</td>
-              <td>${obj.Leason}</td>
               <td>${obj.Teacher}</td>
+              <td>${obj.Leason}</td>
               <td>${obj.Namee}</td>
               <td>${obj.id}</td>`
               row.innerHTML = data;
@@ -94,8 +94,8 @@ let SearchFunction = function () {
               <div class="btn btn-danger btn-delete" data-id="${obj.id}">حذف</div>
               </td>
               <td>${obj.Date}</td>
-              <td>${obj.Leason}</td>
               <td>${obj.Teacher}</td>
+              <td>${obj.Leason}</td>
               <td>${obj.Namee}</td>
               <td>${obj.id}</td>`
               row.innerHTML = data;

@@ -46,7 +46,20 @@ let mainUrl = "http://localhost:8090/VipCenter/config";
 
 
 
+let DeleteHdor = function(e){
 
+  let id = e.target.dataset.id;
+  let url = `${mainUrl}/delete.php?id=${id}&action=hdor`;
+  fetch(url)
+  .then(res =>res.json())
+  .then(data => {
+    console.log(data);
+      if(data.status == 1){
+          e.target.parentElement.parentElement.remove();
+      }
+  });
+
+}
 let SearchFunction = function () {
 
   let name = document.querySelector("input");

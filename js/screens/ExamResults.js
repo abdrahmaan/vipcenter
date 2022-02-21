@@ -43,25 +43,122 @@ setTimeout(() => {
 /// Enter And Click Search Action
 
 let btn = document.querySelector("div#btn-hdor");
+let mainUrl = "http://localhost:8090/VipCenter/config";
 
+let DeleteExam = function (e) {
+  console.log(e.target.id);
+
+  let id = e.target.id;
+  let url = `${mainUrl}/delete.php?id=${id}&action=exam`
+  fetch(url)
+  .then(resp => resp.json())
+  .then(data => {
+
+    if(data.status == 1){
+      e.target.parentElement.parentElement.remove();
+    }
+
+  })
+  } // E-F
 
 let SearchFunction = function () {
   let name = document.querySelector("input");
   let alert = document.querySelector("div.alert.alert-danger");
+  let table = document.querySelector("table tbody");
+  let head = document.querySelector("table thead");
+ 
+  let url = `${mainUrl}/exams.php?name=${name.value}`;
 
   if (name.value.length >= 10 && !name.value.includes("ى")) {
 
+
+    // Hide Alert
     alert.classList.contains("d-none") ? null : alert.classList.add("d-none");
-    // Fetch API Here 
-    console.log(name.value);
-    console.log(name.value.length);
+
+    // Show Table Head IF USER 
+    localStorage.getItem("user-data") === null ? head.firstElementChild.firstElementChild.remove() : null;
+
+    //Fetch Data
+    fetch(url)
+    .then(resp => resp.json())
+    .then(data => {
+      if(data.status == 1){
+        console.log(data);
+        // Delete Rows 
+        table.innerHTML = "";
+
+        //Show Table 
+        table.parentElement.classList.contains("d-none") ? table.parentElement.classList.remove("d-none") : null;
+        
+        // Hide Alert 
+        alert.classList.contains("d-none") ? null : alert.classList.add("d-none");
+
+        data.data.forEach(obj => {
+        if(! localStorage.getItem("user-data")){
+
+          let tr = document.createElement("tr");
+          let trData = `
+          <td>${obj.Date}</td>
+          <td>${obj.Stu_degree}</td>
+          <td>${obj.Full_degree}</td>
+          <td>${obj.Teacher}</td>
+          <td>${obj.Leason}</td>
+          <td>${obj.Namee}</td>
+          <td>${obj.id}</td>
+          `;
+          tr.innerHTML += trData;
+          table.appendChild(tr);
+
+        } else {
+
+          let tr = document.createElement("tr");
+          let trData = `
+          <td>
+          <div id="${obj.id}" class="btn btn-danger btn-delete">حذف</div>
+          </td>
+          <td>${obj.Date}</td>
+          <td>${obj.Stu_degree}</td>
+          <td>${obj.Full_degree}</td>
+          <td>${obj.Teacher}</td>
+          <td>${obj.Leason}</td>
+          <td>${obj.Namee}</td>
+          <td>${obj.id}</td>
+          `;
+          tr.innerHTML += trData;
+          table.appendChild(tr);
+
+        } // End IF He Is User IN Table Render
+        });
+
+          //Attach Button's' Delete
+          let btnDelete = document.querySelectorAll("div.btn.btn-delete");
+
+          
+          //loop on it to Add Action Delete
+          btnDelete.forEach(btn => {
+
+              btn.addEventListener("click",(e) =>{
+                  DeleteExam(e);
+              });
+    
+            
+          });
+
+      } else {
+
+        table.parentElement.classList.contains("d-none") ? null : table.parentElement.classList.add("d-none") ;
+        alert.classList.contains("d-none") ? alert.classList.remove("d-none") : null ;
+        alert.innerHTML = "لا يوجد طالب بهذا الإسم الرجاء التأكد من كتابة الإسم الثلاثى صحيح"
+      } // End If Status == 1
+    })
 
   } else {
 
-    alert.classList.remove("d-none");
-    alert.innerHTML = "من فضلك ، إكتب إسم الطالب ثلاثى وتأكد من وجود حرف الـ ي بالنقاط"
+    alert.classList.contains("d-none") ? alert.classList.remove("d-none") : null;
+    table.parentElement.classList.contains("d-none") ? null : table.parentElement.classList.add("d-none");
+    alert.innerHTML = "من فضلك ، إكتب إسم الطالب ثلاثى وتأكد من وجود حرف الـ ي بالنقاط";
 
-  }
+  } // End If Validation
   }
 
 document.addEventListener("keyup", (e) => {

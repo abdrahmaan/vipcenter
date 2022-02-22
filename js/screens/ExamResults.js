@@ -1,5 +1,4 @@
 /// Focus on input
-
 let stuName = document.querySelector("input");
 stuName.focus();
 
@@ -7,8 +6,6 @@ stuName.focus();
 // Elements & Text 
 let header = document.querySelector(".container #txt-header");
 let headerContent = header.textContent;
-console.log(header);
-console.log(headerContent);
 currentHeader = 0;
 header.innerHTML = "";
 //***
@@ -59,6 +56,7 @@ let DeleteExam = function (e) {
     }
 
   })
+
   } // E-F
 
 let SearchFunction = function () {
@@ -83,7 +81,6 @@ let SearchFunction = function () {
     .then(resp => resp.json())
     .then(data => {
       if(data.status == 1){
-        console.log(data);
         // Delete Rows 
         table.innerHTML = "";
 
@@ -128,7 +125,8 @@ let SearchFunction = function () {
           table.appendChild(tr);
 
         } // End IF He Is User IN Table Render
-        });
+        })
+        
 
           //Attach Button's' Delete
           let btnDelete = document.querySelectorAll("div.btn.btn-delete");
@@ -151,6 +149,12 @@ let SearchFunction = function () {
         alert.innerHTML = "لا يوجد طالب بهذا الإسم الرجاء التأكد من كتابة الإسم الثلاثى صحيح"
       } // End If Status == 1
     })
+    .catch(err => {
+        console.log(err);
+        alert.classList.contains("d-none") ? alert.classList.remove("d-none") : null;
+        table.parentElement.classList.contains("d-none") ? null : table.parentElement.classList.add("d-none");
+        alert.innerHTML = "يوجد خطأ بقواعد البيانات";
+      });
 
   } else {
 
@@ -164,8 +168,7 @@ let SearchFunction = function () {
 document.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
 
-    SearchFunction()
-
+    SearchFunction();
 
   }
 
